@@ -34,9 +34,19 @@
          new Date(2018, 0, 8), new Date(2018, 1, 28), null, 0, null],
       ]);
 
-      var options = {
-        height: 275
-      };
+
+     var options = {
+          height: 275,
+          gantt: {
+            criticalPathEnabled: false, // Critical path arrows will be the same as other arrows.
+            arrow: {
+              angle: 100,
+              width: 5,
+              color: 'green',
+              radius: 0
+            }
+          }
+        };
 
       var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
 
